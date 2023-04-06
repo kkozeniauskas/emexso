@@ -1,4 +1,4 @@
-#hero {
+#about {
     background: #fbd7b5;
 
     .container{
@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 768px){
-    #hero .container{
+    #about .container{
     flex-direction: column;
     text-align: center;
     padding: 50px 0;
