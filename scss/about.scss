@@ -1,14 +1,33 @@
 #about {
-    background: #fbd7b5;
+    
 
     .container{
         @include flex-between;
-    display: flex;
-    padding: 170px 0;
+        flex-direction: row-reverse;
+        gap: 30px;
+        display: flex;
+        padding: 170px 0;
     }
 
     .content{
-    
+
+        
+        .list{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            li{
+                list-style: none;
+                font-weight: bold;
+            
+            }
+
+            span{
+                margin: 0;
+                color: $orange;
+            }
+        }
 
         h3{
             font-size: 1.5em;
@@ -27,10 +46,6 @@
             font-size: 1.2em;
         }
 
-        span{
-            font-weight: bold;
-            margin-left: 1em;
-        }
     }
 
      img{
@@ -59,8 +74,17 @@
         
     }
 
-    span{
-        font-size: 1.2em;
+    .list{
+        flex-direction: column;
+
+        span{
+            font-size: 1.2em;
+        }
     }
+
+    button{
+        width: 65%;
+    }
+
 }
 }
