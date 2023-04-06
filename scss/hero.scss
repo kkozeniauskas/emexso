@@ -4,7 +4,6 @@
     .container{
         @include flex-between;
     display: flex;
-    
     padding: 170px 0;
     }
 
@@ -39,11 +38,24 @@
     }
 
      img{
+        position: relative;
         animation: floating 3s infinite alternate linear;
 
         @keyframes floating{
             from{transform: translateY(0)}
             to{transform: translateY(-20px)}
         }
+
     }
+}
+
+@media (max-width: 768px){
+    #hero .container{
+    flex-direction: column;
+
+    img{
+        max-width: 400px;
+        margin-top: 30px;
+    }
+}
 }
