@@ -2,15 +2,62 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap');
 
+$orange: #fc6c55;
+$blue: #0c2461;
+$font1: Josefin Sans;
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: josefin sans;
+  font-family: Josefin Sans;
+  color: #0c2461;
+  
+  
+  
 }
-.image{
-  height: 200px;
-  width: 200px;
-  background: url(../assets/img1.png);
-  background-size: contain;
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  height: 50px;
+  margin: auto;
+
+  i{
+    color: #fc6c55;
+  }
+
+  .calls{
+    display: flex;
+    gap: 10px;
+    
+  }
+  .social{
+    display: flex;
+    gap: 10px;
+
+    a{
+      border: 1px solid $orange;
+      border-radius: 4px;
+      padding: 10px;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      
+      &:hover{
+        background: $orange;
+      }
+      
+      &:hover i{
+        color: white;
+      }
+    }
+  }
 }
+
+
