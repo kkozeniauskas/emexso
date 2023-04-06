@@ -1,10 +1,9 @@
 /* Remtasi: https://themehoster.com/tf/html/tm/emexso/demo/index.html# */
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap');
-
-$orange: #fc6c55;
-$blue: #0c2461;
-$font1: Josefin Sans;
+@import 'variables';
+@import 'mixins';
+@import 'hero';
 
 *{
   margin: 0;
@@ -17,14 +16,9 @@ $font1: Josefin Sans;
   
 }
 header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
-  height: 50px;
-  margin: auto;
-
+  @include flex-between;
+  border-bottom: 1px solid rgb(135, 207, 235, 0.372);
+  
   i{
     color: #fc6c55;
   }
@@ -56,8 +50,68 @@ header{
       &:hover i{
         color: white;
       }
-    }
+    } 
+  }
+}
+
+nav{
+  @include flex-between;
+  
+  
+
+  .logo img{
+    width: 150px;
+  }
+  .links{
+
+  
+  a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  }
+}
+
+button{
+  padding: 10px 15px;
+  background: $orange;
+  border: 2px solid #fc6c55;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover{
+    background: white;
+    color: $orange;
   }
 }
 
 
+
+@media (max-width: 768px) {
+  header{
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 15px;
+  
+    .calls{
+    flex-direction: column;
+  }
+  }
+}
+
+@media (max-width: 768px) {
+  
+  nav{
+    justify-content: center;
+    gap: 20px;
+   
+    .links{
+      display: none;
+    }
+  }
+}
